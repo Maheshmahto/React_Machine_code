@@ -1,0 +1,20 @@
+
+.accordian{
+    width: 400px;
+    margin: 0 auto;
+}
+.item{
+    background-color: blue;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    color: white;
+}
+.content{
+    color: white;
+}
