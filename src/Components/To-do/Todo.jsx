@@ -1,30 +1,30 @@
 import React, { useState } from 'react'
 import './todo.css'
 const Todo = () => {
-    const [tasks,setTasks] = useState([]);
+    const [tasklist,setTasklist] = useState([]);
     const [task, setTask] = useState("");
     const [editIndex, seteditIndex]= useState(null);
 
  const handleAddOrUpdateTask = ()=>{
 
     if(editIndex !==null){
-        const updateTasks = [...tasks];
-        updateTasks[editIndex]=task;
-        setTasks(updateTasks);
+        const updatetasklist = [...tasklist];
+        updatetasklist[editIndex]=task;
+        setTasklist(updatetasklist);
         seteditIndex(null);
     }
     else{
-     setTasks([...tasks,task]);
+     setTasklist([...tasklist,task]);
     }
     // setTask("");
  }
  const handleEditTask = (index)=>{
-    setTask(tasks[index]);
+    setTask(tasklist[index]);
     seteditIndex(index);
  };
 //  current element and their index
  const handleDeleteTask = (index)=>{
-    setTasks( tasks.filter( (element,i)=> i !== index));
+    setTasklist( tasklist.filter( (element,i)=> i !== index));
  }
   return (
     <>
@@ -41,7 +41,7 @@ const Todo = () => {
            </div>
            <ul className='task-list'>
              {
-                tasks.map( (t,index)=>(
+                tasklist.map( (t,index)=>(
                     <li key={index} className='task-item'>
                         <span>{t}</span>
                         <div >
