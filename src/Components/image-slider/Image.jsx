@@ -1,6 +1,9 @@
-import { useState } from "react";
-import { FaArrowAltCircleRight, FaArrowCircleLeft } from "react-icons/fa";
-import "./Image.css";
+
+import React, { useState } from 'react'
+ import './Image.css'
+ import { FaChevronCircleLeft } from "react-icons/fa";
+ import { FaChevronCircleRight } from "react-icons/fa";
+
 
 const Slider = () => {
   const ImageData = [
@@ -17,37 +20,39 @@ const Slider = () => {
       link: "https://i.guim.co.uk/img/media/c8c00617b792d1d53f2d2b318820d5758dc61551/231_0_2968_1782/master/2968.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=b8c80905bc7264df9060efdc6f6a4aa1",
     },
   ];
+  const [activeindex,setactiveindex]=useState(0);
 
-  const [activeIndex, setActiveIndex] = useState(0);
+  const handleprev =()=>{
+    console.log('prev');
+    setactiveindex( (current)=>(current -1 + ImageData.length)%ImageData.length)
 
-  const handleNext = () => {
-    setActiveIndex((prevIndex) => (prevIndex + 1) % ImageData.length);
-  };
+  }
+  const handlenext =()=>{
+    console.log('prev');
 
-  const handlePrev = () => {
-    setActiveIndex(
-      (prevIndex) => (prevIndex - 1 + ImageData.length) % ImageData.length
-    );
-  };
+  setactiveindex((current)=>(current+1)%ImageData.length)
 
+  }
+  
   return (
-    <div className="container">
-      <div className="image-container">
-        {ImageData.map((item, index) => (
-          <div
-            key={index}
-            className={`imagemap ${index === activeIndex ? "active" : ""}`}
-          >
-            <img src={item.link} alt={`Image ${index + 1}`} />
-          </div>
-        ))}
-      </div>
-      <div className="left-right">
-        <FaArrowCircleLeft onClick={handlePrev} className="left" />
-        <FaArrowAltCircleRight onClick={handleNext} className="right" />
-      </div>
+    <div className='slider-container'>
+        <div className="img-container">
+            {
+              ImageData.map((item,index)=>(
+                <div className={`imgmap ${index=== activeindex ? 'active' : ''}`} key={index}>
+                    <img src={item.link} />
+                </div>
+              ))
+            }
+        </div>
+        <div className="controls">
+        <FaChevronCircleLeft onClick={handleprev} className='left' />
+        <FaChevronCircleRight onClick={handlenext}  className='right' />
+        </div>
+   
     </div>
-  );
-};
+  
+  )
+}
 
-export default Slider;
+export default Slider

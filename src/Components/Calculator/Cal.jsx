@@ -12,7 +12,7 @@ const Cal = ()=>{
         if(value === 'C'){
             setinput('');
         }
-        else if(value === '='){
+        else if(value ==='='){
             setinput(eval(input))
         }
         else{

@@ -1,56 +1,51 @@
-.container {
-    border: 1px solid black;
-    height: 300px;
-    width: 300px;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-  }
+
+.slider-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  height: 400px;
+  width: 400px;
+  flex-direction: column;
+  margin: 50px auto;
+
+}
+.img-container{
+  border: 1px solid black;
+  height: 300px;
+  width: 300px;
+  position: relative;
+  overflow: hidden;
   
-  .image-container {
-    height: 250px;
-    width: 230px;
-    margin: 0 auto;
-    margin-top: 10px;
-    position: relative;
-  }
-  
-  .imagemap {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-  .imagemap.active {
-    opacity: 1;
-  }
-  
-  .imagemap img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* display: block; */
-  }
-  
-  .left-right {
-    display: flex;
-    margin: 0 auto;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  .left {
-    font-size: 30px;
-    cursor: pointer;
-  }
-  
-  .right {
-    font-size: 30px;
-    cursor: pointer;
-  }
-  
+}
+.imgmap {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ opacity: 0;
+ position: absolute;
+ /* transition: 0.5s ease-in-out; */
+}
+
+.imgmap img{
+  width: 100%;
+  height: 100%;
+}
+ 
+.active{
+  opacity: 1;
+}
+.controls{
+  cursor: pointer;
+  margin-top: 10px;
+}
+.left{
+  font-size: 30px;
+  cursor: pointer;
+  margin: 4px;
+}
+.right{
+  font-size: 30px;
+  cursor: pointer;
+  margin: 4px;
+}

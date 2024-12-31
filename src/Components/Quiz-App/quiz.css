@@ -1,0 +1,26 @@
+.quiz-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.option-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+.option-container button{
+    padding: 10px;
+    font-weight: 600;
+}
+*{
+    /* border: 1px solid magenta; */
+}
+.option-container button:hover{
+    background-color: yellow;
+    color: black;
+}
+.quiz-container p{
+    font-size: 25px;
+}
