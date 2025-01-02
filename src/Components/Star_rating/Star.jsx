@@ -27,13 +27,10 @@ const Star =({noOfstar})=>{
             onMouseLeave={()=>handleMouseleave(index)}
 
             />
-    
           })
     
     }
      
-
-
     </>
 
     )
