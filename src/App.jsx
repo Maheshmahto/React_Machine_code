@@ -14,6 +14,7 @@ import Load from './Components/Load-more/Load'
 import Progress from './Components/Progress/Progress'
 
 import './App.css'
+import TabTest from './Components/Tabs/TabTest'
 const App = () => {
   const [progress,setprogress]=useState(0);
   useEffect( ()=>{
@@ -41,7 +42,8 @@ const App = () => {
      {/* <Countdown></Countdown> */}
      {/* <Load></Load> */}
 
-     <Progress progress={progress} color={'blue'}></Progress>
+     {/* <Progress progress={progress} color={'blue'}></Progress> */}
+     <TabTest></TabTest>
     </div>
   )
 }
