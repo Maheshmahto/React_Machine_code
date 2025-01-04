@@ -15,6 +15,8 @@ import Progress from './Components/Progress/Progress'
 
 import './App.css'
 import TabTest from './Components/Tabs/TabTest'
+import Search from './Components/SearchAutoComplete/Search'
+import Checkbox from './Components/Checkbox/Checkbox'
 const App = () => {
   const [progress,setprogress]=useState(0);
   useEffect( ()=>{
@@ -43,7 +45,9 @@ const App = () => {
      {/* <Load></Load> */}
 
      {/* <Progress progress={progress} color={'blue'}></Progress> */}
-     <TabTest></TabTest>
+     {/* <TabTest></TabTest> */}
+     {/* <Search></Search> */}
+     <Checkbox></Checkbox>
     </div>
   )
 }
