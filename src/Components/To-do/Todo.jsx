@@ -16,7 +16,7 @@ const Todo = () => {
     else{
      setTasklist([...tasklist,task]);
     }
-    // setTask("");
+    setTask("");
  }
  const handleEditTask = (index)=>{
     setTask(tasklist[index]);

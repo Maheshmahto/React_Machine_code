@@ -35,7 +35,7 @@ const App = () => {
      {/* <Slider></Slider> */}
 
      {/* <Cal></Cal> */}
-     {/* <TodoApp></TodoApp> */}
+     <TodoApp></TodoApp>
      {/* <Weather></Weather> */}
      {/* <TicTacToe></TicTacToe> */}
      {/* <QrCode></QrCode> */}
@@ -47,7 +47,8 @@ const App = () => {
      {/* <Progress progress={progress} color={'blue'}></Progress> */}
      {/* <TabTest></TabTest> */}
      {/* <Search></Search> */}
-     <Checkbox></Checkbox>
+     {/* <Checkbox></Checkbox> */}
+
     </div>
   )
 }

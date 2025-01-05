@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from 'react'
 import { use } from 'react';
+import Suggestion from './Suggestion';
 
 const Search = () => {
     const [user,setUser]=useState([]);
@@ -30,19 +31,42 @@ const Search = () => {
     useEffect(()=>{
         fetchUserData();
     },[])
-    console.log(user)
+    // console.log(user)
 
-    // const handleOnclick=()={
+    const handleOnchange=(event)=>{
+        // const query=event.target.value.toLowerCase();
+        const query = event.target.value.toLowerCase(); 
 
-    // }
+        setSearchPara(query);
+       if(query.length>1){
+        const filterdata= user && user.length ? user.filter( (item)=>item.toLowerCase().indexOf(query)>-1):[]
+        setfilterData(filterdata);
+        setShowDropdown(filterData);
+        
+       }
+       else{
+        setShowDropdown(false);
+       }
+    }
+    console.log(user);
+    console.log(filterData);
+    const handleOnclick=(event)=>{
+
+      setShowDropdown(false);
+      setSearchPara(event.target.innerText);
+    }
   return (
     <div>
         {
             loading ? <div>please wait! data is loading</div> :
-             <input type="text" value={SearchPara}  placeholder='Enter Name'/>
+             <input type="text" value={SearchPara} 
+             onChange={handleOnchange}           
+              placeholder='Enter Name'/>
 
         }
-
+        {
+            showDropdown && <Suggestion data={filterData} handleOnclick={handleOnclick}></Suggestion>
+        }
     </div>
   )
 }
