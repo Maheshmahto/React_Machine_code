@@ -17,6 +17,9 @@ import './App.css'
 import TabTest from './Components/Tabs/TabTest'
 import Search from './Components/SearchAutoComplete/Search'
 import Checkbox from './Components/Checkbox/Checkbox'
+import Custom from './Components/CustomHook/Custom'
+import CustHook from './Components/CustomHook/CustHook'
+import Outside from './Components/OnclickOutside/Outside'
 const App = () => {
   const [progress,setprogress]=useState(0);
   useEffect( ()=>{
@@ -35,7 +38,7 @@ const App = () => {
      {/* <Slider></Slider> */}
 
      {/* <Cal></Cal> */}
-     <TodoApp></TodoApp>
+     {/* <TodoApp></TodoApp> */}
      {/* <Weather></Weather> */}
      {/* <TicTacToe></TicTacToe> */}
      {/* <QrCode></QrCode> */}
@@ -48,7 +51,8 @@ const App = () => {
      {/* <TabTest></TabTest> */}
      {/* <Search></Search> */}
      {/* <Checkbox></Checkbox> */}
-
+      {/* <CustHook></CustHook> */}
+      <Outside></Outside>
     </div>
   )
 }
