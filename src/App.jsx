@@ -20,6 +20,8 @@ import Checkbox from './Components/Checkbox/Checkbox'
 import Custom from './Components/CustomHook/Custom'
 import CustHook from './Components/CustomHook/CustHook'
 import Outside from './Components/OnclickOutside/Outside'
+import Tree from './Components/TreeView/Tree'
+import { files } from './Components/TreeView/data'
 const App = () => {
   const [progress,setprogress]=useState(0);
   useEffect( ()=>{
@@ -53,6 +55,7 @@ const App = () => {
      {/* <Checkbox></Checkbox> */}
       {/* <CustHook></CustHook> */}
       <Outside></Outside>
+      {/* <Tree files={files}></Tree> */}
     </div>
   )
 }
