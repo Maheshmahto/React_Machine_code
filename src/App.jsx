@@ -22,6 +22,7 @@ import CustHook from './Components/CustomHook/CustHook'
 import Outside from './Components/OnclickOutside/Outside'
 import Tree from './Components/TreeView/Tree'
 import { files } from './Components/TreeView/data'
+import WindowSize from './Components/WindowSize/WindowSize'
 const App = () => {
   const [progress,setprogress]=useState(0);
   useEffect( ()=>{
@@ -42,7 +43,7 @@ const App = () => {
      {/* <Cal></Cal> */}
      {/* <TodoApp></TodoApp> */}
      {/* <Weather></Weather> */}
-     {/* <TicTacToe></TicTacToe> */}
+     <TicTacToe></TicTacToe>
      {/* <QrCode></QrCode> */}
      {/* <LightDark></LightDark> */}
      {/* <Quiz></Quiz> */}
@@ -54,8 +55,9 @@ const App = () => {
      {/* <Search></Search> */}
      {/* <Checkbox></Checkbox> */}
       {/* <CustHook></CustHook> */}
-      <Outside></Outside>
+      {/* <Outside></Outside> */}
       {/* <Tree files={files}></Tree> */}
+      {/* <WindowSize></WindowSize> */}
     </div>
   )
 }

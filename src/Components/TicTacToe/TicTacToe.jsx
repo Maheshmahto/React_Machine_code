@@ -25,7 +25,7 @@ const checkwinner =(board)=>{
     return null;
 
 }
-
+console.log(board)
 
   const handleClick = (index)=>{
     if (board[index] || winner) return;
